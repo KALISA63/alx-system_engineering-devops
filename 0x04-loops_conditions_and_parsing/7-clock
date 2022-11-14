@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Uses while loop to print 12 hour "clock"
+h=0
+while [ $h -lt 13 ]
+do
+    echo "Hour:" $h
+    m=1
+    while [ $m -lt 60 ]
+    do
+        echo $m
+        m=$(( m + 1 ))
+    done
+    h=$(( h + 1 ))
+done
