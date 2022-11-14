@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# displays directory content in a list format without prefix
+for f in *; do
+  echo "$f" | cut -d '-' -f 2
+done
