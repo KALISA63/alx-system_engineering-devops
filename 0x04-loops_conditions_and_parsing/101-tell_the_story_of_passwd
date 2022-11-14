@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# THE STORY OF PASSWD
+IFS=':'
+while read -r LOGIN PASSWORD USER_ID G_ID USERNAME HOME SHELL
+    do
+        echo "The user $LOGIN is part of the $G_ID gang," \
+        "lives in $HOME and rides $SHELL." \
+        "$USER_ID's place is protected by the passcode $PASSWORD," \
+        "more info about the user here: $USERNAME"
+    done < /etc/passwd
